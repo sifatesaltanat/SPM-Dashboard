@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ---- Dark SOC theme base ---- */
+html { color-scheme: dark; }
+body {
+  background-color: #020617;
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Badge helpers */
+@utility badge-critical {
+  background-color: rgb(239 68 68 / 0.2);
+  color: #f87171;
+  border: 1px solid rgb(239 68 68 / 0.3);
+}
+@utility badge-high {
+  background-color: rgb(249 115 22 / 0.2);
+  color: #fb923c;
+  border: 1px solid rgb(249 115 22 / 0.3);
+}
+@utility badge-medium {
+  background-color: rgb(245 158 11 / 0.2);
+  color: #fbbf24;
+  border: 1px solid rgb(245 158 11 / 0.3);
+}
+@utility badge-low {
+  background-color: rgb(16 185 129 / 0.2);
+  color: #34d399;
+  border: 1px solid rgb(16 185 129 / 0.3);
+}
+@utility badge-operational {
+  background-color: rgb(16 185 129 / 0.2);
+  color: #34d399;
+  border: 1px solid rgb(16 185 129 / 0.3);
+}
+@utility badge-degraded {
+  background-color: rgb(245 158 11 / 0.2);
+  color: #fbbf24;
+  border: 1px solid rgb(245 158 11 / 0.3);
+}
+
+/* Card styling */
+.card {
+  background-color: rgb(15 23 42 / 0.8);
+  border: 1px solid rgb(51 65 85 / 0.5);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  backdrop-filter: blur(4px);
+}
+.card-hover {
+  background-color: rgb(15 23 42 / 0.8);
+  border: 1px solid rgb(51 65 85 / 0.5);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s;
+}
+.card-hover:hover {
+  border-color: rgb(71 85 105 / 0.7);
+  background-color: rgb(15 23 42);
+}
